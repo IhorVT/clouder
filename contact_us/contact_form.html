@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link type="text/css" rel="stylesheet" href="../css/contact_us.css">
+</head>
+<body>
+<div class="borders"></div>
+<section id="wrap2">
+    <form method="post" action="">
+        <fieldset>
+            <legend>Your contact info. and feedback</legend>
+            <label for="firstname">First name:</label><br>
+            <input type="text" name="name" id="firstname" required><br>
+            <label for="lastname">Last name:</label><br>
+            <input type="text" name="name" id="lastname" required><br>
+            <label for="email">e-mail:</label><br>
+            <input type="email" name="email" id="email" required pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"><br>
+            <label for="feedback">Feedback:</label><br>
+            <textarea name="feedback" rows="10" cols="40" id="feedback" required></textarea><br><br>
+            <input type="submit" value="Send">
+        </fieldset>
+    </form>
+
+</section>
+<div class="borders"></div>
+<a href="../index.html" title="Back to main page">Go back</a>
+</body>
+</html>
