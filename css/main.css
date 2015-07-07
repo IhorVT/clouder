@@ -1,0 +1,87 @@
+body{
+    padding:0;
+    background-color: dodgerblue;
+}
+.page {
+    margin:5px  auto 20px ;
+    padding-top:10px;
+    position:relative;
+    width:1200px;
+    background-color: deepskyblue;
+}
+
+.mainMenu{
+    background-color: darkkhaki;
+    padding: 5px;
+}
+
+#icons{
+    margin: 0 auto;
+    padding: 0;
+    position:relative;
+    width: 1200px;
+}
+
+#icons ul{
+    padding: 0;
+}
+
+
+#icons ul, li{
+    list-style-type: none;
+    display: inline;
+}
+
+header{
+    padding: 0;
+    margin:0;
+}
+
+#mainPage{
+    padding: 0;
+    font-size: 70px;
+    text-align: center;
+    margin:0;
+    color:white;
+    text-shadow:1px 1px black;
+}
+
+footer{
+    text-align: center;
+    color:white;
+}
+
+#today{
+    display: flex;
+}
+
+#imagePlace{
+    width: 600px;
+    height:500px;
+    padding:0;
+    margin:0;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#status{
+    width:100px;
+    height:500px;
+    padding:130px 0 0 0;
+    margin:0;
+    font-size: 50px;
+    color:white;
+}
+
+#nextDays{
+    display: flex;
+    padding:0;
+    margin:0;
+}
+.nextD{
+    width:300px;
+    padding:0;
+    margin:0;
+}
