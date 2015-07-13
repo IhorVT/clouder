@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Clouder-daily weather forecast.</title>
+    <title>Weather forecast</title>
     <link type="text/css" rel="stylesheet" href="css/main.css" >
 </head>
 <body>
@@ -11,8 +11,8 @@
         <div id="icons">
             <ul>
                 <li><a href="index.html" title="Home"><img src="img/icons/nav/home.png" alt="Link to home page" width="25px" height="25px"></a> </li>
-                <li><a href="long-term_forecast/lonf-term.html" title="Forecast for next seven days"><img src="img/icons/nav/7days_icon.png" alt="Link to the page with forecast for seven days" width="25px" height="25px"></a> </li>
-                <li><a href="contact_form/contact_form.html" title="Contuct us"><img src="img/icons/nav/feedback_icon.png" alt="Link to the page with contact form" width="35px" height="25px"></a></li>
+                <li><a href="forecast_for_seven_days/seven_days.html" title="Forecast for next seven days"><img src="img/icons/nav/7days_icon.png" alt="Link to the page with forecast for seven days" width="25px" height="25px"></a> </li>
+                <li><a href="contact_us/contact_form.html" title="Contuct us"><img src="img/icons/nav/feedback_icon.png" alt="Link to the page with contact form" width="35px" height="25px"></a></li>
             </ul>
         </div>
     </div>
@@ -20,43 +20,35 @@
 <div id="page" class="page">
     <header>
         <div id="mainPage" class="headerBody">
-            <img src="img/logo.png" alt="Clouder. Your personal daily weather prophet."  width="1000px" height="200px">
+            <p>Weather Forecast</p>
         </div>
+        <hr>
     </header>
+
     <section id="content">
         <div id="forecast">
             <div id="today">
-                <div id="currentDate"><h2>Today (<span id="todayDate">July 13</span>)</h2> </div>
-               <div id="imagePlace"><img src="img/clouds%20and%20sun.png" alt="Clouds and Sun" width="435px" height="322px" >
-                   <div id="primeTemperature">29&deg;C</div>
-               </div>
-
+                <div id="imagePlace"><h1>Today</h1><img src="img/clouds%20and%20sun.png" alt="Clouds and Sun" width="586px" height="434px"></div>
+                <div id="status">29&deg;C</div>
                 <div id="otherDetails"></div>
             </div>
+            <hr>
             <div id="nextDays">
-                <div id="t1" class="nextD">
-                    <span id="t1Date">July 14</span>
-                    <div class="smallPic"><img src="img/storm%20with%20thunder.png" alt="Rain and thunder" width="145px" height="107px">
-                        <div id="temp_t1" class="temperature">29&deg;C</div>
-                    </div>
+                <div class="nextD">
+                    <div class="smallPic"><img src="img/storm%20with%20thunder.png" alt="Rain and thunder" width="293px" height="217px"></div>
+                    <div class="temperature"></div>
                 </div>
-                <div id="t2" class="nextD">
-                    <span id="t2Date">July 15</span>
-                    <div class="smallPic"><img src="img/clouds%20and%20sun.png" alt="Rain and thunder" width="145px" height="107px">
-                        <div id="temp_t2" class="temperature">29&deg;C</div>
-                    </div>
+                <div class="nextD">
+                    <div class="smallPic"><img src="img/clouds%20and%20sun.png" alt="Rain and thunder" width="293px" height="217px"></div>
+                    <div class="temperature"></div>
                 </div>
-                <div id="t3" class="nextD">
-                    <span id="t3Date">July 16</span>
-                    <div class="smallPic"><img src="img/clouds%20and%20sun.png" alt="Rain and thunder" width="145px" height="107px">
-                        <div id="temp_t3" class="temperature">29&deg;C</div>
-                    </div>
+                <div class="nextD">
+                    <div class="smallPic"><img src="img/clouds%20and%20sun.png" alt="Rain and thunder" width="293px" height="217px"></div>
+                    <div class="temperature"></div>
                 </div>
-                <div id="t4" class="nextD">
-                    <span id="t4Date">July 17</span>
-                    <div class="smallPic"><img src="img/sunny.png" alt="Sun" width="145px" height="107px">
-                        <div id="temp_t4" class="temperature">29&deg;C</div>
-                    </div>
+                <div class="nextD">
+                    <div class="smallPic"><img src="img/sunny.png" alt="Sun" width="293px" height="217px"></div>
+                    <div class="temperature"></div>
                 </div>
             </div>
         </div>

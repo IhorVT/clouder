@@ -4,10 +4,10 @@ body{
 }
 .page {
     margin:5px  auto 20px ;
-    padding-top:0px;
+    padding-top:10px;
     position:relative;
-    width:1000px;
-
+    width:1200px;
+    background-color: deepskyblue;
 }
 
 .mainMenu{
@@ -19,7 +19,7 @@ body{
     margin: 0 auto;
     padding: 0;
     position:relative;
-    width: 1000px;
+    width: 1200px;
 }
 
 #icons ul{
@@ -33,14 +33,11 @@ body{
 }
 
 header{
-    padding:0;
-    margin:0 0 10px 0;
+    padding: 0;
+    margin:0;
 }
 
-/*Content area*/
-
 #mainPage{
-    width: inherit;
     padding: 0;
     font-size: 70px;
     text-align: center;
@@ -52,84 +49,39 @@ header{
 footer{
     text-align: center;
     color:white;
-    padding: 2px 0;
-    margin: 0;
-    background-color: deepskyblue;
 }
 
-/*INFORMATION AREA*/
-
-#content{background-color: deepskyblue}
-
-/*Current info deck*/
 #today{
-    width: inherit;
-    height: 500px;
+    display: flex;
 }
-
-#currentDate h2 {
-    position: relative;
-    left:150px;
-    width:400px;
-    height:100px;
-    margin:0;
-    padding:0;
-    color:white;
-    font-size: 3em;
-}
-
-
 
 #imagePlace{
-    position:relative;
-    left:0;
-    top:-150px;
     width: 600px;
-    padding:0;
-    margin:150px 0 0 0;
-}
-
-#primeTemperature{
-    float:right;
+    height:500px;
     padding:0;
     margin:0;
-    width:140px;
-    font-size: 65px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+#status{
+    width:100px;
+    height:500px;
+    padding:130px 0 0 0;
+    margin:0;
+    font-size: 50px;
     color:white;
 }
 
-/* Next days area deck*/
 #nextDays{
-    height:200px;
     display: flex;
     padding:0;
     margin:0;
-    background-color: dodgerblue;
-
 }
 .nextD{
-    width:220px;
-    padding:0;
-    margin:15px;
-    background-color: deepskyblue;
-    text-align: center;
-    color:white;
-    font-size: 2em;
-}
-
-
-.smallPic{
-    position:relative;
-    float:left;
-    left:20px;
-
-}
-
-.temperature{
-    float:right;
+    width:300px;
     padding:0;
     margin:0;
-    width:50px;
-    font-size: 20px;
-    color:white;
 }
