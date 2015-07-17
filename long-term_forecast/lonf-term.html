@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forecast for seven days</title>
-    <link type="text/css" rel="stylesheet" href="../css/seven_days.css">
+    <title>Long-term weather forecast</title>
+    <link type="text/css" rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-
-<section id="wrap">
-    <table width="800px" style=" border-collapse: collapse">
-        <caption>Forecast for seven days</caption>
-        <thead>
+<div id="menu" class="mainMenu">
+    <div class="menuBody">
+        <div id="icons">
+            <ul>
+                <li><a href=".." title="Home"><img src="../img/icons/nav/home.png" alt="Link to home page" width="30px" height="30px"></a> </li>
+                <li><a href="../long-term_forecast/lonf-term.html" title="Forecast for next seven days"><img src="../img/icons/nav/7days_icon.png" alt="Link to the page with forecast for seven days" width="30px" height="30px"></a> </li>
+                <li><a href="../contact_form/contact_form.html" title="Contuct us"><img src="../img/icons/nav/feedback_icon.png" alt="Link to the page with contact form" width="30px" height="30px"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="page" class="page">
+    <header>
+        <div id="mainPage" class="headerBody">
+            <a href=".." ><img src="../img/logo.png" alt="Clouder. Your personal daily weather prophet."  width="1000px" height="200px"></a>
+        </div>
+    </header>
+    <section id="content">
+        <table width="800px" style=" border-collapse: collapse">
+            <caption>Forecast for seven days</caption>
+            <thead>
             <tr>
                 <th>Date</th>
                 <th>Day</th>
@@ -19,8 +35,8 @@
                 <th>Wind</th>
                 <th>Pressure</th>
             </tr>
-        </thead>
-        <tbody>
+            </thead>
+            <tbody>
             <tr>
                 <td>July 6</td>
                 <td>Monday</td>
@@ -77,10 +93,19 @@
                 <td>NW, 14 km/h </td>
                 <td> 1018.00</td>
             </tr>
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </section>
 
-</section>
-<a href="../index.html" title="Back to main page">Go back</a>
+    <footer>
+        <div id="mainPageBot" class="allFooters">
+            <p>
+                Summer 2015
+            </p>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
+
+

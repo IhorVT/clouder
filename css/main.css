@@ -10,31 +10,35 @@ body{
 
 }
 
-.mainMenu{
-    background-color: darkkhaki;
-    padding: 5px;
-}
-
+/*#menu{position:relative;
+    width:1050px;
+    margin:0  auto 0;
+    padding:10px }
+*/
 #icons{
-    margin: 0 auto;
-    padding: 0;
     position:relative;
-    width: 1000px;
-}
+    top:-10px;
+    margin: 0 auto;
+    padding: 5px;
 
-#icons ul{
-    padding: 0;
+    width: 1000px;
+    height:30px;
+    background-color: honeydew;
+    border-radius: 0 0 10px 10px;
 }
 
 
 #icons ul, li{
+    padding:0 0 0 5px;
     list-style-type: none;
     display: inline;
+
 }
+
 
 header{
     padding:0;
-    margin:0 0 10px 0;
+    margin:0 0 5px 0;
 }
 
 /*Content area*/
