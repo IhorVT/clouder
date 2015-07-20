@@ -4,73 +4,145 @@
     <meta charset="UTF-8">
     <title>Clouder-daily weather forecast.</title>
     <link type="text/css" rel="stylesheet" href="css/main.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 </head>
 <body>
 <div id="menu" class="mainMenu">
     <div class="menuBody">
         <div id="icons">
-            <ul>
+            <nav><ul>
                 <li><a href="index.html" title="Home"><img src="img/icons/nav/home.png" alt="Link to home page" width="30px" height="30px"></a> </li>
-                <li><a href="long-term_forecast/lonf-term.html" title="Forecast for next seven days"><img src="img/icons/nav/7days_icon.png" alt="Link to the page with forecast for seven days" width="30px" height="30px"></a> </li>
+                <li><a href="long-term_forecast/long-term.html" title="Forecast for next seven days"><img src="img/icons/nav/7days_icon.png" alt="Link to the page with forecast for seven days" width="30px" height="30px"></a> </li>
                 <li><a href="contact_form/contact_form.html" title="Contuct us"><img src="img/icons/nav/feedback_icon.png" alt="Link to the page with contact form" width="30px" height="30px"></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<div id="page" class="page">
-    <header>
-        <div id="mainPage" class="headerBody">
-            <img src="img/logo.png" alt="Clouder. Your personal daily weather prophet."  width="1000px" height="200px">
-        </div>
-    </header>
-    <section id="content">
-        <div id="forecast">
-            <div id="today">
-                <div id="currentDate"><h2>Today (<span id="todayDate">July 13</span>)</h2> </div>
-               <div id="imagePlace"><img src="img/clouds%20and%20sun.png" alt="Clouds and Sun" width="435px" height="322px" >
-                   <div id="primeTemperature">29&deg;C</div>
-               </div>
+                <li><button onclick="currentPosition()" id="locBut"><img src="img/icons/nav/loc.png" width="30px" height="30px" alt="Find Location"></button> </li>
+                <!--<<li><form id="locForm"><input type="image" id="locBut"   src="img/icons/nav/loc.png" width="30px" height="30px" alt="Find Location"></form></li>-->
+             </ul></nav>
+             <div id="locationPicker">
+                 <form id="locationForm" method="get">
+                     <input type="text" id="locationF" list="cities" name="locationC"><input type="submit" value="Go!" id="go_button">
+                     <datalist id="cities">
+                         <option value="Cherkasy"></option>
+                         <option value="Chernihiv"></option>
+                         <option value="Chernivtsi"></option>
+                         <option value="Dnipropetrovsk"></option>
+                         <option value="Donetsk"></option>
+                         <option value="Ivano-Frankivsk"></option>
+                         <option value="Kharkiv"></option>
+                         <option value="Kherson"></option>
+                         <option value="Khmelnytskyi"></option>
+                         <option value="Kiev"></option>
+                         <option value="Kirovohrad"></option>
+                         <option value="Luhansk"></option>
+                         <option value="Lviv"></option>
+                         <option value="Mykolaiv"></option>
+                         <option value="Odessa"></option>
+                         <option value="Poltava"></option>
+                         <option value="Rivne"></option>
+                         <option value="Sumy"></option>
+                         <option value="Ternopil"></option>
+                         <option value="Vinnytsia"></option>
+                         <option value="Lutsk"></option>
+                         <option value="Uzhhorod"></option>
+                         <option value="Zaporizhia"></option>
+                         <option value="Zhytomyr"></option>
+                         <option value="Simferopol"></option>
+                         <option value="Sevastopol"></option>
+                     </datalist>
+                 </form>
+             </div>
 
-                <div id="otherDetails"></div>
-            </div>
-            <div id="nextDays">
-                <div id="t1" class="nextD">
-                    <span id="t1Date">July 14</span>
-                    <div class="smallPic"><img src="img/storm%20with%20thunder.png" alt="Rain and thunder" width="145px" height="107px">
-                        <div id="temp_t1" class="temperature">29&deg;C</div>
-                    </div>
-                </div>
-                <div id="t2" class="nextD">
-                    <span id="t2Date">July 15</span>
-                    <div class="smallPic"><img src="img/clouds%20and%20sun.png" alt="Rain and thunder" width="145px" height="107px">
-                        <div id="temp_t2" class="temperature">29&deg;C</div>
-                    </div>
-                </div>
-                <div id="t3" class="nextD">
-                    <span id="t3Date">July 16</span>
-                    <div class="smallPic"><img src="img/clouds%20and%20sun.png" alt="Rain and thunder" width="145px" height="107px">
-                        <div id="temp_t3" class="temperature">29&deg;C</div>
-                    </div>
-                </div>
-                <div id="t4" class="nextD">
-                    <span id="t4Date">July 17</span>
-                    <div class="smallPic"><img src="img/sunny.png" alt="Sun" width="145px" height="107px">
-                        <div id="temp_t4" class="temperature">29&deg;C</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+         </div>
+     </div>
+ </div>
+ <div id="page" class="page">
+     <header>
+         <div id="mainPage" class="headerBody">
+             <img src="img/logo.png" alt="Clouder. Your personal daily weather prophet."  width="1000px" height="200px">
+         </div>
+     </header>
+     <section id="content">
+         <div id="locTitle"><p><span id="cityTitle"></span></p><hr></div>
 
-    <footer>
-        <div id="mainPageBot" class="allFooters">
-            <p>
-                Summer 2015
-            </p>
-        </div>
-    </footer>
-</div>
+         <div id="today">
+             <div id="dateStatus"> Today, <span id="todayDate"></span></div>
+             <div id="status">
+                 <div id="todayPic"></div>
+                 <div id="todayTemp"></div>
+                 <div id="otherDetails">
+                     <table>
+                         <tr>
+                             <th>Conditions:</th>
+                             <td id="todayCond"></td>
+                         </tr>
+                         <tr>
+                             <th>Min.temp.:</th>
+                             <td id="todayMin"></td>
+                         </tr>
+                         <tr>
+                             <th>Max.temp.:</th>
+                             <td id="todayMax"></td>
+                         </tr>
+                         <tr>
+                             <th>Precipitation:</th>
+                             <td id="todayPrecip"></td>
+                         </tr>
+                         <tr>
+                             <th>Humidity:</th>
+                             <td id="todayHumidity"></td>
+                         </tr>
+                         <tr>
+                             <th>Wind:</th>
+                             <td id="todayWind"></td>
+                         </tr>
+                         <tr>
+                             <th>Pressure:</th>
+                             <td id="todayPressure"></td>
+                         </tr>
+                     </table>
+                 </div>
+             </div>
 
+         </div>
+         <div id="nextDays">
+             <div id="t1" class="nextD">
+                 <div id="t1Date"></div>
+                 <div id="t1Pic" class="smallPic"></div>
+                 <div id="t1Temp" class="temperature"></div>
+                 <div id="t1Cond" class="smallCond"></div>
+             </div>
+             <div id="t2" class="nextD">
+                 <div id="t2Date"></div>
+                 <div id="t2Pic" class="smallPic"></div>
+                 <div id="t2Temp" class="temperature"></div>
+                 <div id="t2Cond" class="smallCond"></div>
+             </div>
+             <div id="t3" class="nextD">
+                 <div id="t3Date"></div>
+                 <div id="t3Pic" class="smallPic"></div>
+                 <div id="t3Temp" class="temperature"></div>
+                 <div id="t3Cond" class="smallCond"></div>
+             </div>
+             <div id="t4" class="nextD">
+                 <div id="t4Date"></div>
+                 <div id="t4Pic" class="smallPic"></div>
+                 <div id="t4Temp" class="temperature"></div>
+                 <div id="t4Cond" class="smallCond"></div>
+             </div>
+         </div>
+         <footer>
+             <div id="mainPageBot" class="allFooters">
+                 <p>
+                     Summer 2015
+                 </p>
+             </div>
+         </footer>
+     </section>
+ </div>
 
-</body>
-</html>
+ <script src="js/defaultPos.js"></script>
+ <script src="js/whereRu.js"></script>
+ <script src="js/desired.js"></script>
+
+ </body>
+ </html>

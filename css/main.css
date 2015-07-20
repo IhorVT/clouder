@@ -1,3 +1,5 @@
+
+
 body{
     padding:0;
     background-color: dodgerblue;
@@ -10,29 +12,45 @@ body{
 
 }
 
-/*#menu{position:relative;
-    width:1050px;
-    margin:0  auto 0;
-    padding:10px }
-*/
+
 #icons{
     position:relative;
     top:-10px;
     margin: 0 auto;
-    padding: 5px;
-
+    padding: 10px 5px;
     width: 1000px;
     height:30px;
     background-color: honeydew;
     border-radius: 0 0 10px 10px;
+    display: flex;
 }
 
 
-#icons ul, li{
-    padding:0 0 0 5px;
+nav ul, li,form{
+    height: 30px;
+    margin-top: 30px;
+    padding: 0;
     list-style-type: none;
     display: inline;
+}
 
+#locBut{
+    background: transparent;
+    border:0;
+    padding:0;
+}
+
+#locationPicker{
+    position: relative;
+    right:0;
+    padding:5px 0 0 0;
+    margin:0 0 0 auto;
+    width:250px;
+    }
+
+form{
+    padding:0;
+    margin:0;
 }
 
 
@@ -53,58 +71,78 @@ header{
     text-shadow:1px 1px black;
 }
 
-footer{
-    text-align: center;
-    color:white;
-    padding: 2px 0;
-    margin: 0;
-    background-color: deepskyblue;
-}
+
+
+
 
 /*INFORMATION AREA*/
 
-#content{background-color: deepskyblue}
-
-/*Current info deck*/
-#today{
-    width: inherit;
-    height: 500px;
+#locTitle , p {
+    padding: 0;
+    margin:0;
 }
 
-#currentDate h2 {
+#locTitle p{
     position: relative;
-    left:150px;
-    width:400px;
-    height:100px;
-    margin:0;
+    left:30px;
+    font-size: 4em;
+    color: white;
+}
+
+#content{
+    background-color: deepskyblue;
     padding:0;
-    color:white;
-    font-size: 3em;
+    margin:0;
+    color: white;
 }
 
 
+/*REMASTERED*/
+#dateStatus{
+    font-size: 36px;
+    padding-left: 150px;
+}
 
-#imagePlace{
+#status{
+    font-size: 2em;
+    display: flex;
+    width:1000px;
+    margin:0;
+    padding:0;
+}
+
+#todayPic{
+    width:435px;
+}
+#todayPic img{
+    width: 435px;
+    height:322px;
+}
+#todayTemp{
+    font-size: 2em;
+}
+#otherDetails{
+    font-size: 26px;
     position:relative;
-    left:0;
-    top:-150px;
-    width: 600px;
-    padding:0;
-    margin:150px 0 0 0;
+    padding: 0 0 60px;
+    width: 400px;
 }
 
-#primeTemperature{
-    float:right;
-    padding:0;
-    margin:0;
-    width:140px;
-    font-size: 65px;
-    color:white;
+#otherDetails table{
+    width:inherit;
 }
+
+ #otherDetails th{
+    text-align: right;
+     text-decoration: underline;
+}
+ #otherDetails td{
+     text-align: center;
+ }
 
 /* Next days area deck*/
 #nextDays{
-    height:200px;
+    height:220px;
     display: flex;
     padding:0;
     margin:0;
@@ -126,7 +164,11 @@ footer{
     position:relative;
     float:left;
     left:20px;
+}
 
+.smallPic img{
+    width: 145px;
+    height: 107px ;
 }
 
 .temperature{
@@ -138,4 +180,18 @@ footer{
     color:white;
 }
 
+.smallCond{
+    clear:both;
+    font-size: 20px;
+    text-align: center;
+}
+
+footer{
+    clear:both;
+    text-align: center;
+    color:white;
+    padding: 2px 0;
+    margin: 0;
+    background-color: deepskyblue;
+}
 /*backwards*/

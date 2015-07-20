@@ -9,11 +9,46 @@
 <div id="menu" class="mainMenu">
     <div class="menuBody">
         <div id="icons">
-            <ul>
+            <nav><ul>
                 <li><a href=".." title="Home"><img src="../img/icons/nav/home.png" alt="Link to home page" width="30px" height="30px"></a> </li>
-                <li><a href="../long-term_forecast/lonf-term.html" title="Forecast for next seven days"><img src="../img/icons/nav/7days_icon.png" alt="Link to the page with forecast for seven days" width="30px" height="30px"></a> </li>
+                <li><a href="long-term.html" title="Forecast for next seven days"><img src="../img/icons/nav/7days_icon.png" alt="Link to the page with forecast for seven days" width="30px" height="30px"></a> </li>
                 <li><a href="../contact_form/contact_form.html" title="Contuct us"><img src="../img/icons/nav/feedback_icon.png" alt="Link to the page with contact form" width="30px" height="30px"></a></li>
-            </ul>
+                <li><button onclick="currentPosition()" id="locBut"><img src="../img/icons/nav/loc.png" width="30px" height="30px" alt="Find Location"></button> </li>
+            </ul></nav>
+            <div id="locationPicker">
+                <form id="locationForm">
+                    <input type="text" id="location" list="cities" name="location"><input type="submit" value="Go!" id="go_button">
+                    <datalist id="cities">
+                        <option value="Cherkasy"></option>
+                        <option value="Chernihiv"></option>
+                        <option value="Chernivtsi"></option>
+                        <option value="Dnipropetrovsk"></option>
+                        <option value="Donetsk"></option>
+                        <option value="Ivano-Frankivsk"></option>
+                        <option value="Kharkiv"></option>
+                        <option value="Kherson"></option>
+                        <option value="Khmelnytskyi"></option>
+                        <option value="Kiev"></option>
+                        <option value="Kirovohrad"></option>
+                        <option value="Luhansk"></option>
+                        <option value="Lviv"></option>
+                        <option value="Mykolaiv"></option>
+                        <option value="Odessa"></option>
+                        <option value="Poltava"></option>
+                        <option value="Rivne"></option>
+                        <option value="Sumy"></option>
+                        <option value="Ternopil"></option>
+                        <option value="Vinnytsia"></option>
+                        <option value="Lutsk"></option>
+                        <option value="Uzhhorod"></option>
+                        <option value="Zaporizhia"></option>
+                        <option value="Zhytomyr"></option>
+                        <option value="Simferopol"></option>
+                        <option value="Sevastopol"></option>
+                    </datalist>
+                </form>
+            </div>
+
         </div>
     </div>
 </div>
