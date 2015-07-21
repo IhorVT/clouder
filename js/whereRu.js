@@ -1,7 +1,7 @@
 /**
  * Created by TW on 18.07.2015.
  */
-
+/*Function that activates navigator*/
 function currentPosition(){
     if (navigator.geolocation) {
         console.log('succes');
@@ -12,7 +12,7 @@ function currentPosition(){
     }
 }
 
-
+/*Function that preparing position data for transfer into json request function*/
 function locFinded(position){
     console.log(position.coords.latitude, position.coords.longitude);
     var pstn='lat='+position.coords.latitude+'&lon='+position.coords.longitude;

@@ -3,7 +3,7 @@
  */
 //console.log(localStorage);
 
-
+/*Function that makes JSON request*/
 function defPos(pos) {
     var weatherAPI = 'http://api.openweathermap.org/data/2.5/forecast/daily?'+pos+'&units=metric&cnt=8';
     $.getJSON(weatherAPI, function (response) {
@@ -16,7 +16,7 @@ function defPos(pos) {
         });
 }
 
-
+/*Function that parsing JSON response and filling out data on the index page*/
 function loadData(flag){
     var cache = JSON.parse(localStorage.defaultWeather);
     if (flag==='madeNew'){
@@ -25,6 +25,7 @@ function loadData(flag){
     var tableToday=['todayDate','cityTitle','todayPic','todayTemp','todayCond','todayMin','todayMax','todayPrecip','todayHumidity','todayWind','todayPressure'];
     var nextDT=['dummy',['t1Date','t1Temp','t1Pic','t1Cond'],['t2Date','t2Temp','t2Pic','t2Cond'],['t3Date','t3Temp','t3Pic','t3Cond'],['t4Date','t4Temp','t4Pic','t4Cond']];
     for(var i= 0, ii=0; i<tableToday.length;i++){
+        /*filling out data for today*/
         switch (tableToday[i]){
             case 'cityTitle':
                 document.getElementById('cityTitle').innerHTML=cache.data.city.name+', '+ cache.data.city.country;
@@ -73,6 +74,7 @@ function loadData(flag){
     }
     for(var y= 1, zz=1+ii; y<5, zz<5+ii;y++,zz++){//zz -index for iterating data in json for 4 next days; y-index for iterating in nextDT array which holds object id's ; x-index for iterating inside array elements in nextDT
         for(var x=0;x<4;x++) {
+            /*filling out data for 4 next days*/
             switch (nextDT[y][x]) {
                 case nextDT[y][0]:
                     var mDate = dateSmall(cache.data.list[zz].dt);
@@ -90,39 +92,44 @@ function loadData(flag){
             }
         }
     }
-    //before function closing
+    //before function closing, little milestone =)
 }
 
+
+/* Date handler for Today forecast with shifting feature in case if in JSON response first date stamp mismatch with local date */
 function dateHand(dUnix){
-    var lTime= new Date(),lDay=lTime.getDate();
+    var lTime= new Date(),lDay=lTime.getDate();//getting our local time for verifying date stamp
     var dTime= new Date(dUnix*1000),
         month=dTime.getMonth(),
         day=dTime.getDate();
-    if ((lDay%day)!=0){   //Note what will happen at 1st day of month
+    if ((lDay%day)!=0){   // in case if first time date refer to yesterday, making request for shift  note what will happen at 1st day of month
         return '1';
     }
-    var monthArary=["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"]
+    var monthArary=["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
     return monthArary[month]+' '+day;
 }
 
+/* Date handler for next 4 day forecast*/
 function dateSmall(dUnix){
     var dTime= new Date(dUnix*1000),
         month=dTime.getMonth(),
         day=dTime.getDate();
-    var monthArary=["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"]
+    var monthArary=["Jan","Feb","Mar","Apr","May","Jun","July","Aug","Sep","Oct","Nov","Dec"];
     return monthArary[month]+' '+day;
 }
 
+
+/* Function that helps to calculate wind direction */
 function windDirection(degree){
-    var val=parseInt(degree/22.5 +0.5);
+    var val=parseInt(degree/22.5 +0.5);//adding 0,5 for proper truncation
     var dirArray=["N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"];
-    return dirArray[(val%16)];
+    return dirArray[(val%16)];//angle changes at every 22.5 degrees, 360/22.5=16, there is 16 directions
 }
 
-
+/* Checking if weather forecast has been launched on this browser */
 if(typeof localStorage.defaultWeather==='undefined'){
-    defPos('q=Kiev');
+    defPos('q=Kiev'); //in case of first launch default location is Kiev
 }else{
-    loadData('madeNew');
+    loadData('madeNew'); //in other case will pick last location and make request by that location
 }
 
