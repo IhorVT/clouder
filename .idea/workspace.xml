@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.76923">
-              <caret line="134" column="131" selection-start-line="134" selection-start-column="116" selection-end-line="134" selection-end-column="131" />
+              <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -35,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/long-term_forecast/long-term.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-16.115385">
-              <caret line="69" column="130" selection-start-line="69" selection-start-column="130" selection-end-line="69" selection-end-column="130" />
+              <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
               <folding>
                 <element signature="n#datalist#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -46,8 +46,8 @@
       <file leaf-file-name="contact_form.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contact_form/contact_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64827585">
-              <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.53103447">
+              <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -805,7 +805,7 @@
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.76923">
-          <caret line="134" column="131" selection-start-line="134" selection-start-column="116" selection-end-line="134" selection-end-column="131" />
+          <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -813,7 +813,7 @@
     <entry file="file://$PROJECT_DIR$/long-term_forecast/long-term.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.115385">
-          <caret line="69" column="130" selection-start-line="69" selection-start-column="130" selection-end-line="69" selection-end-column="130" />
+          <caret line="69" column="31" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
           <folding>
             <element signature="n#datalist#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
@@ -822,8 +822,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contact_form/contact_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64827585">
-          <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.53103447">
+          <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
           <folding />
         </state>
       </provider>
