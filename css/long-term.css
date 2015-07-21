@@ -10,11 +10,18 @@ table{
 caption{
     font-size: 3em;
 }
+
+#longTable{
+    position: relative;
+    top:-10px;
+    background-color: deepskyblue;
+}
 #tableHeader {
     font-size: 23px;
     color:black;
     background-color: #D0CA9C;
 }
+
 
 th,td{
     margin: 5px;

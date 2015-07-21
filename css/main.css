@@ -56,19 +56,15 @@ form{
 
 header{
     padding:0;
-    margin:0 0 5px 0;
+    margin:0;
 }
 
 /*Content area*/
 
-#mainPage{
+#mainPage, a#mainPage {
     width: inherit;
     padding: 0;
-    font-size: 70px;
-    text-align: center;
     margin:0;
-    color:white;
-    text-shadow:1px 1px black;
 }
 
 
@@ -77,20 +73,22 @@ header{
 
 /*INFORMATION AREA*/
 
-#locTitle , p {
+#locTitle, #locTitle  p {
     padding: 0;
     margin:0;
 }
 
 #locTitle p{
     position: relative;
-    left:30px;
+    padding-left: 30px;
+
     font-size: 4em;
     color: white;
+    border-bottom: 3px solid white;
 }
 
 #content{
-    background-color: deepskyblue;
+    background-color: dodgerblue ;
     padding:0;
     margin:0;
     color: white;
@@ -109,6 +107,9 @@ header{
     width:1000px;
     margin:0;
     padding:0;
+}
+#today{
+    background-color: #003366;
 }
 
 #todayPic{
@@ -152,8 +153,8 @@ header{
 .nextD{
     width:220px;
     padding:0;
-    margin:15px;
-    background-color: deepskyblue;
+    margin:15px 15px 0 15px;
+    background-color: #003366;
     text-align: center;
     color:white;
     font-size: 2em;
@@ -186,12 +187,23 @@ header{
     text-align: center;
 }
 
+#contactForm{
+    margin: 20px;
+    padding:10px;
+    color:white ;
+    background-color:#003366 ;
+}
+
 footer{
     clear:both;
     text-align: center;
     color:white;
     padding: 2px 0;
-    margin: 0;
-    background-color: deepskyblue;
+    margin: 15px 0 0 0;
+    background-color: #003366;
+}
+
+footer a {
+    color:white;
 }
 /*backwards*/
