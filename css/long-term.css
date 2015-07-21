@@ -1,0 +1,9 @@
+table{
+    position:relative;
+    margin:10px auto;
+}
+
+.icons img{
+    width:73px;
+    height:54px;
+}
