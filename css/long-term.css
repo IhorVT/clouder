@@ -14,7 +14,7 @@ caption{
 #longTable{
     position: relative;
     top:-10px;
-    background-color: deepskyblue;
+    background-color: inherit;
 }
 #tableHeader {
     font-size: 23px;

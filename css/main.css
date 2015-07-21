@@ -196,11 +196,15 @@ header{
 
 footer{
     clear:both;
-    text-align: center;
-    color:white;
-    padding: 2px 0;
+    padding: 0;
     margin: 15px 0 0 0;
     background-color: #003366;
+}
+
+footer p{
+    text-align: left;
+    color:white;
+    padding: 5px 5px 5px 10px;
 }
 
 footer a {
