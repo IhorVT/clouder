@@ -1,9 +1,38 @@
 table{
+    width: 900px;
     position:relative;
     margin:10px auto;
+    padding: 0;
+    text-align: center;
+    border-spacing: 5px 20px;
+}
+
+caption{
+    font-size: 3em;
+}
+#tableHeader {
+    font-size: 23px;
+    color:black;
+    background-color: #D0CA9C;
+}
+
+th,td{
+    margin: 5px;
+    border: 1px solid white;
 }
 
 .icons img{
     width:73px;
     height:54px;
+}
+
+.sevenD{
+    background-color:#3D72A4 ;
+    color:white;
+    font-size: 20px;
+}
+
+.sevenOth{
+    background-color: #003366;
+    color: white;
 }

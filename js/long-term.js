@@ -37,12 +37,13 @@ function loadDataLong(flag) {
             this.humidity,
             this.pressure,
             windDirection(this.deg),
+            this.speed,
             this.weather[0].description
         );
     });
 }
 
-function rollDown(dateD,day, icon, temp ,precip,hmd,prs,wind,alt){
+function rollDown(dateD,day, icon, temp ,precip,hmd,prs,wind,speed,alt){
     var prc;
     if(typeof precip==='undefined'){
         prc='0 mm';
@@ -51,8 +52,8 @@ function rollDown(dateD,day, icon, temp ,precip,hmd,prs,wind,alt){
     }
 
     var markup = '<tr>'+
-        '<td>' + dateD + '</td>' + '<td>' + day + '</td>'+ '<td>' + '<img width="73px" height="54px" src="../img/'+ icon +'.png" alt='+alt+'/>'+'<td>' + temp + '</td>' +
-        '<td>' + prc + '</td>'+'<td>' + hmd + '</td>'+'<td>' + prs + '</td>'+'<td>' + wind + '</td>'
+        '<td class="sevenD">' + dateD + '</td>' + '<td class="sevenD">' + day + '</td>'+ '<td class="sevenOth">' + '<img width="73px" height="54px" src="../img/'+ icon +'.png" alt='+alt+'/>'+'<td class="sevenOth">' + temp + '</td>' +
+        '<td class="sevenOth">' + prc + '</td>'+'<td class="sevenOth">' + hmd +' &#37;'+ '</td>'+'<td class="sevenOth">' + prs + ' hpa'+'</td>'+'<td class="sevenOth">' + wind + ', '+speed+' m/s'+'</td>'
         + '</tr>';
     sevenDays.insertRow(-1).innerHTML = markup; // Додаємо рядок до таблиці
 }
@@ -61,14 +62,14 @@ function rollDown(dateD,day, icon, temp ,precip,hmd,prs,wind,alt){
 function rollUP(){
     sevenDays.innerHTML ='';
     var tmp='<caption>Forecast for seven days</caption>'+
-    '<tr>'+
+    '<tr id="tableHeader">'+
     '<th>Date</th>'+
     '<th>Day</th>'+
     '<th>Conditions</th>'+
     '<th>Temperature</th>'+
     '<th>Precipitation</th>'+
     '<th>Humidity</th>'+
-    '<th>Pressure</th>'
+    '<th>Pressure</th>'+
     '<th>Wind</th>'+
     '</tr>';
     sevenDays.innerHTML=tmp;
