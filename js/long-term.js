@@ -5,7 +5,7 @@
 
 /*Function that makes JSON request*/
 function defPosLong(pos) {
-    var weatherAPI = 'http://api.openweathermap.org/data/2.5/forecast/daily?'+pos+'&units=metric&cnt=8';
+    var weatherAPI = 'http://api.openweathermap.org/data/2.5/forecast/daily?'+pos+'&APPID=1cae48a1f1f9d634a387eacf304f35c8&units=metric&cnt=8';
     $.getJSON(weatherAPI, function (response) {
         localStorage.defaultWeather = JSON.stringify({
             timestamp: (new Date()).getTime(),	// getTime() returns milliseconds
